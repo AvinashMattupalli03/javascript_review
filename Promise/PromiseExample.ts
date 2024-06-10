@@ -1,15 +1,14 @@
 const array: number[] = [1, 2, 3, 4, 5, 6];
 const numberToCheck: number = 6;
 
-const checkNumber = (num: number): Promise<string> => {
+const checkNumber = (num: number): Promise<number[]> => {
   return new Promise((resolve, reject) => {
-    const resolveData = "Resolved";
     const rejectData = "Rejected";
     const delay = 2000;
 
     setTimeout(() => {
       if (num > 5) {
-        resolve(resolveData);
+        resolve(array);
       } else {
         reject(rejectData);
       }
@@ -18,8 +17,8 @@ const checkNumber = (num: number): Promise<string> => {
 };
 
 checkNumber(numberToCheck)
-  .then((message) => {
-    console.log(message);
+  .then((array) => {
+    console.log(array);
   })
   .catch((error) => {
     console.error(error);
