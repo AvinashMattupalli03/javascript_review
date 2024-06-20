@@ -1,4 +1,6 @@
 import { createTheme } from "@mui/material";
+import "@fontsource/montserrat";
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -9,6 +11,7 @@ const theme = createTheme({
     },
   },
   typography: {
+    fontFamily: "Montserrat",
     h6: {
       fontSize: "1.2rem",
       fontWeight: 600,
@@ -25,7 +28,7 @@ const theme = createTheme({
     },
     caption: {
       fontSize: "0.9rem",
-      fontWeight: 300,
+      fontWeight: 500,
     },
   },
 });

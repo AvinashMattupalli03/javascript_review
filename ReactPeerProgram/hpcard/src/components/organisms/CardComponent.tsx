@@ -5,21 +5,25 @@ import Content from "../molecules/Content";
 import Footer from "../molecules/Footer";
 
 const StyledCard = styled(Card)(({ theme }) => ({
-  height: 281,
-  width: 350,
+  height: 271,
+  width: 320,
   borderRadius: "12px",
   margin: theme.spacing(2),
-  padding: theme.spacing(2),
+  padding: "16px 17.5px",
 }));
+
+const StyledCardContent = styled(CardContent)({
+  padding: "0px",
+});
 
 const CardComponent = () => {
   return (
     <StyledCard>
-      <CardContent>
+      <StyledCardContent>
         <Header />
         <Content />
         <Footer />
-      </CardContent>
+      </StyledCardContent>
     </StyledCard>
   );
 };
