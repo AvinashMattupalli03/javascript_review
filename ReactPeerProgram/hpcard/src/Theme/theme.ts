@@ -9,17 +9,23 @@ const theme = createTheme({
     secondary: {
       main: "#dc004e",
     },
+    text: {
+      primary: "#373C38",
+      secondary: "#656E66",
+      disabled: "#B0BEC5",
+    },
   },
   typography: {
     fontFamily: "Montserrat",
     h6: {
+      color: "#373C38",
       fontSize: "1.2rem",
       fontWeight: 600,
     },
     subtitle1: {
       fontSize: "1rem",
       color: "#FF725E",
-      fontWeight: 400,
+      fontWeight: 500,
     },
     subtitle2: {
       color: "#656E66",
@@ -27,8 +33,10 @@ const theme = createTheme({
       fontWeight: 400,
     },
     caption: {
-      fontSize: "0.9rem",
-      fontWeight: 500,
+      color: "#373C38",
+      fontSize: "12px",
+      lineHeight: "16px",
+      fontWeight: 600,
     },
   },
 });

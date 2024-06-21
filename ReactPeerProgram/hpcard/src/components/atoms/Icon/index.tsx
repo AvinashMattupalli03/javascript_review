@@ -1,19 +1,14 @@
 import React from "react";
 
-interface IconElementProps {
+interface IconProps {
   src: string;
   alt: string;
   height?: number | string;
   width?: number | string;
 }
 
-const IconElement: React.FC<IconElementProps> = ({
-  src,
-  alt,
-  height,
-  width,
-}) => {
+const Icon: React.FC<IconProps> = ({ src, alt, height, width }) => {
   return <img src={src} alt={alt} height={height} width={width} />;
 };
 
-export default IconElement;
+export default Icon;

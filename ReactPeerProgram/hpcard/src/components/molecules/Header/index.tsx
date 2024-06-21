@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from "@mui/material";
 import styled from "@emotion/styled";
-import IconElement from "../atoms/IconElement";
+import Icon from "../../atoms/Icon";
 
 const HeaderContainer = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -11,14 +11,9 @@ const HeaderContainer = styled(Box)(({ theme }) => ({
 const Header = () => {
   return (
     <HeaderContainer>
-      <IconElement
-        src="./icons/hp.png"
-        alt="HP Logo"
-        height="63px"
-        width="63px"
-      />
-      <IconElement
-        src="./icons/more.png"
+      <Icon src="./assets/hp.png" alt="HP Logo" height="63px" width="63px" />
+      <Icon
+        src="./assets/more.png"
         alt="More Options"
         height="24px"
         width="24px"
