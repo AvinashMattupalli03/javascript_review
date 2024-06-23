@@ -1,14 +1,17 @@
 import React from "react";
+import styled from "@emotion/styled";
 
 interface IconProps {
   src: string;
   alt: string;
-  height?: number | string;
-  width?: number | string;
 }
 
-const Icon: React.FC<IconProps> = ({ src, alt, height, width }) => {
-  return <img src={src} alt={alt} height={height} width={width} />;
+const StyledIcon = styled.img<{ size?: string }>`
+  ${({ size }) => (size ? `height: ${size}; width: ${size};` : "")}
+`;
+
+const Icon: React.FC<IconProps & { size?: string }> = ({ src, alt, size }) => {
+  return <StyledIcon src={src} alt={alt} size={size} />;
 };
 
 export default Icon;

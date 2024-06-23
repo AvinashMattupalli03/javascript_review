@@ -11,10 +11,10 @@ const IconsContainer = styled(Box)(({ theme }) => ({
 }));
 
 const icons = [
-  { src: "./assets/bike.png", alt: "Bike" },
-  { src: "./assets/bus.png", alt: "Bus" },
-  { src: "./assets/car.png", alt: "Car" },
-  { src: "./assets/train.png", alt: "Train" },
+  { src: "./assets/bike.png", alt: "Bike", size: "20px" },
+  { src: "./assets/bus.png", alt: "Bus", size: "20px" },
+  { src: "./assets/car.png", alt: "Car", size: "20px" },
+  { src: "./assets/train.png", alt: "Train", size: "20px" },
 ];
 
 const Footer = () => {
@@ -23,13 +23,7 @@ const Footer = () => {
       <Typography variant="caption">Commute routes available:</Typography>
       <IconsContainer>
         {icons.map((icon, index) => (
-          <Icon
-            key={index}
-            src={icon.src}
-            alt={icon.alt}
-            height="20px"
-            width="20px"
-          />
+          <Icon key={index} src={icon.src} alt={icon.alt} size={icon.size} />
         ))}
         <Typography variant="caption">1hr 36 mins ago</Typography>
       </IconsContainer>

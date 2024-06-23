@@ -11,13 +11,8 @@ const HeaderContainer = styled(Box)(({ theme }) => ({
 const Header = () => {
   return (
     <HeaderContainer>
-      <Icon src="./assets/hp.png" alt="HP Logo" height="63px" width="63px" />
-      <Icon
-        src="./assets/more.png"
-        alt="More Options"
-        height="24px"
-        width="24px"
-      />
+      <Icon src="./assets/hp.png" alt="HP Logo" size="63px" />
+      <Icon src="./assets/more.png" alt="More Options" size="24px" />
     </HeaderContainer>
   );
 };
