@@ -1,45 +1,40 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
-
-interface Post {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
-}
+import Box from "@mui/material/Box";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import { fetchPosts, Post } from "../../service/postsService";
+import { HEADING } from "../../utils/constants";
 
 const PostsApi: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const getPosts = async () => {
       try {
-        const response = await axios.get<Post[]>(
-          "https://jsonplaceholder.typicode.com/posts?userId=10"
-        );
-        setPosts(response.data);
+        const postsData = await fetchPosts(10);
+        setPosts(postsData);
       } catch (error) {
-        console.error("Fetching Failed", error);
+        console.error(error);
       }
     };
 
-    fetchData();
+    getPosts();
   }, []);
 
   return (
-    <div>
-      <h1>Last 10 Posts By Using Query Parameter</h1>
-      <ul>
+    <Box>
+      <h1>{HEADING}</h1>
+      <List>
         {posts.map((post) => (
-          <li key={post.id}>
-            <p>Id: {post.id} </p>
-            <p>UserId: {post.userId} </p>
-            <p>title: {post.title}</p>
-            <p>body: {post.body}</p>
-          </li>
+          <ListItem key={post.id}>
+            <ListItemText primary={`Id: ${post.id}`} />
+            <ListItemText primary={`Title: ${post.title}`} />
+            <ListItemText primary={`Body: ${post.body}`} />
+          </ListItem>
         ))}
-      </ul>
-    </div>
+      </List>
+    </Box>
   );
 };
 
