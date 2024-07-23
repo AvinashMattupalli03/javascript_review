@@ -30,3 +30,7 @@ yarn-error.log*
 /package.json
 /package-lock.json 
 /tsconfig.json 
+/public
+/src/index.tsx
+/src/index.css 
+/README.md 

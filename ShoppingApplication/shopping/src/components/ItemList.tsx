@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Box, Button, Typography } from "@mui/material";
 import styled from "styled-components";
 import { CartContext } from "./CartContext";
-import { items } from "../constatnts";
+import { items } from "../constants";
 
 const ItemBox = styled(Box)`
   display: flex;
